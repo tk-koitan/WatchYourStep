@@ -183,9 +183,11 @@ public class RunPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        /*
         if (collision.gameObject.tag == "DeadZone")
         {
             RunManager.Instance.GameOver();
         }
+        */
     }
 }
