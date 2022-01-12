@@ -73,6 +73,7 @@ public class Coin : MonoBehaviour
         {
             case CoinColor.None:
                 gameObject.SetActive(false);
+                return;
                 break;
             case CoinColor.Yellow:
                 animator.Play("Idle");
@@ -90,13 +91,14 @@ public class Coin : MonoBehaviour
                 coinNum = 10;
                 break;
         }
-        if (coinColor == CoinColor.None) return;
         // é©ï™ÇÃîñÇ¢äGÇÃï°êª
+        /*
         var copy = Instantiate(sr, sr.transform.position, Quaternion.identity);
         copy.transform.SetParent(transform.parent);
         Color c = copy.color;
         c.a = 0.2f;
         copy.color = c;
+        */
     }
 }
 
