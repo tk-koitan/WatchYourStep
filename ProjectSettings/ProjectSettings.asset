@@ -654,6 +654,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
+    1: KOITAN_DEBUG
     7: KOITAN_DEBUG
   additionalCompilerArguments: {}
   platformArchitecture: {}
