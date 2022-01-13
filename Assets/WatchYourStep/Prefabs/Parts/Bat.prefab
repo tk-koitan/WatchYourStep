@@ -94,9 +94,10 @@ GameObject:
   - component: {fileID: 5266398552399870607}
   - component: {fileID: 2315135208772170531}
   - component: {fileID: 2018733763079023624}
+  - component: {fileID: 5279526988065037197}
   m_Layer: 0
   m_Name: Bat
-  m_TagString: DeadZone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,3 +258,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5279526988065037197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5266398552399870604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c3b39a72b3d344293a0caea37128b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
