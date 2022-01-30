@@ -29,6 +29,7 @@ public class RunManager : MonoBehaviour
     float lightAmountDecreaseSpeed = 0.05f;
     [SerializeField]
     float lightMinAmount = 0.25f;
+    bool isTimeStop = false;
     public static float AthleticSpeed
     {
         get => Instance.athleticSpeed;
@@ -47,6 +48,7 @@ public class RunManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            isTimeStop = true;
         }
         else
         {
@@ -66,13 +68,21 @@ public class RunManager : MonoBehaviour
         currentAthletic.transform.position = new Vector3(-currentAthletic.athleticWidth / 2, 0);
         restAthleticWidth = currentAthletic.athleticWidth / 2;
         lightAmount = 1f;
+        Illumination.Open(() => isTimeStop = false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isTimeStop)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f + timeScaleDecreaseSpeed * liveTime;
+        }
         liveTime += Time.deltaTime;
-        Time.timeScale = 1f + timeScaleDecreaseSpeed * liveTime;
         LightAmount -= lightAmountDecreaseSpeed * Time.deltaTime;
 #if UNITY_EDITOR
         // デバッグ用

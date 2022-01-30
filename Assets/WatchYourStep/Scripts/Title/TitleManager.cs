@@ -17,6 +17,7 @@ public class TitleManager : MonoBehaviour
     {
         highSocreTextMesh.text = $"{PlayerPrefs.GetInt("HighScore", 0)} M";
         coinTextMesh.text = $"{PlayerPrefs.GetInt("CoinNum", 0)} G";
+        Illumination.Open(() => Debug.Log("Opened"), 2f);
     }
 
     // Update is called once per frame
@@ -37,9 +38,9 @@ public class TitleManager : MonoBehaviour
 
     public void OnClickStartButton()
     {
-        if (GameManager.Instance.UseStamina(1))
+        if (Illumination.CanClose && GameManager.Instance.UseStamina(1))
         {
-            SceneManager.LoadScene("Run");
+            Illumination.Close(() => SceneManager.LoadScene("Run"));
         }
     }
 
