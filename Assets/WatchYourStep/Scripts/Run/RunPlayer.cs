@@ -161,8 +161,11 @@ public class RunPlayer : MonoBehaviour
         }
 
         light2d.intensity = 1f * RunManager.LightAmount;
+        /*
+        // ライトの半径
         light2d.pointLightInnerRadius = maxLightRadius * 0.5f * RunManager.LightAmount;
         light2d.pointLightOuterRadius = maxLightRadius * RunManager.LightAmount;
+        */
 
         //ゲームオーバー判定
         if (transform.position.y < deathZoneY)
