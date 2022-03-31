@@ -23,7 +23,7 @@ public class TitleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int rs = GameManager.Instance.restSeconds();
+        int rs = GameManager.Instance.RestSeconds();
         int mm = rs / 60;
         int ss = rs % 60;
         if (GameManager.Instance.IsStaminaMax())

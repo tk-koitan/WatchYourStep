@@ -161,6 +161,8 @@ public class RunPlayer : MonoBehaviour
         }
 
         light2d.intensity = 1f * RunManager.LightAmount;
+        light2d.pointLightOuterAngle = RunManager.LightAngle;
+        light2d.pointLightInnerAngle = RunManager.LightAngle / 2f;
         /*
         // ƒ‰ƒCƒg‚Ì”¼Œa
         light2d.pointLightInnerRadius = maxLightRadius * 0.5f * RunManager.LightAmount;

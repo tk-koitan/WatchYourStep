@@ -42,6 +42,13 @@ public class RunManager : MonoBehaviour
         set => Instance.lightAmount = Mathf.Clamp(value, Instance.lightMinAmount, 1);
     }
 
+    float lightAngle = 20;
+    public static float LightAngle
+    {
+        get => Instance.lightAngle;
+        set => Instance.lightAngle = value;
+    }
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -68,6 +75,7 @@ public class RunManager : MonoBehaviour
         currentAthletic.transform.position = new Vector3(-currentAthletic.athleticWidth / 2, 0);
         restAthleticWidth = currentAthletic.athleticWidth / 2;
         lightAmount = 1f;
+        LightAngle = 20f;
         Illumination.Open(() => isTimeStop = false);
     }
 
@@ -105,6 +113,7 @@ public class RunManager : MonoBehaviour
         coinTextMesh.text = $"{GameManager.CoinNum} G";
         KoitanDebug.Display($"Time.timeScale = {Time.timeScale}\n");
     }
+
 
     public void GameOver()
     {

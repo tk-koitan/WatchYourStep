@@ -74,7 +74,6 @@ public class Coin : MonoBehaviour
             case CoinColor.None:
                 gameObject.SetActive(false);
                 return;
-                break;
             case CoinColor.Yellow:
                 animator.Play("Idle");
                 getAnimName = "Get";

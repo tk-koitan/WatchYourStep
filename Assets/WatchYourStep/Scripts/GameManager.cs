@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
-    public int restSeconds()
+    public int RestSeconds()
     {
         if (IsStaminaMax())
         {
